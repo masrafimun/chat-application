@@ -1,0 +1,7 @@
+.active {
+    background: transparent;
+}
+
+.active p{
+    color:  rgb(94, 94, 94);
+}
