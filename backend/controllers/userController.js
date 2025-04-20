@@ -10,6 +10,13 @@ import userModel from "../models/userModel.js"
 import messageModel from '../models/messageModel.js'
 
 
+export const mainHome = async (req,res) =>{
+    res.json({
+        success : true,
+        message : "welcome to the chat applicaiton"
+    })
+}
+
 //creating login endpoint
 export const login = async (req,res) => {
     const {email,password} = req.body
@@ -836,60 +843,6 @@ export const deleteAccount = async (req,res) =>{
 
 
 
-//socket io connection
-// const userController = (io) => {
-//     io.on("connection", (socket) => {
-//       console.log("A user connected");
-  
-//       // Listen for joinConversation event
-//       socket.on("joinConversation", async ({ senderId, receiverId }) => {
-//         try {
-//           let conversation = await Conversation.findOne({
-//             members: { $all: [senderId, receiverId] },
-//           });
-  
-//           if (!conversation) {
-//             conversation = await Conversation.create({
-//               members: [senderId, receiverId],
-//             });
-//           }
-  
-//           socket.join(conversation._id.toString());
-//           console.log(`User ${senderId} and ${receiverId} joined conversation ${conversation._id}`);
-//         } catch (err) {
-//           console.error("Error joining conversation:", err);
-//         }
-//       });
-  
-//       // Listen for sendMessage event
-//       socket.on("sendMessage", async (messageData) => {
-//         const { sender, receiver, content, image, conversationId } = messageData;
-  
-//         try {
-//           // Save the new message to the database
-//           const newMessage = await Message.create({
-//             sender,
-//             receiver,
-//             content,
-//             image,
-//             conversationId,
-//           });
-  
-//           // Emit the new message to all users in the conversation room
-//           io.to(conversationId).emit("newMessage", newMessage);
-//           console.log(`Message sent from ${sender} to ${receiver}`);
-//         } catch (err) {
-//           console.error("Error sending message:", err);
-//         }
-//       });
-  
-//       // Handle user disconnect event
-//       socket.on("disconnect", () => {
-//         console.log("A user disconnected");
-//       });
-//     });
-//   };
-  
 
 
 
