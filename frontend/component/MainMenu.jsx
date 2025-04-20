@@ -53,7 +53,7 @@ const MainMenu = () => {
 
             {/* Button to open sidebar on small screens */}
            
-           <div className='fixed bg-[#24bab8] left-0 py-4 px-2 top-0 w-full sm:hidden'>
+           <div className='fixed bg-[#24bab8] left-0 py-2 sm:py-4 px-2 top-0 w-full sm:hidden'>
              <div className='w-full flex justify-between text-white text-2xl'>
                 <p>CHATAPP</p>
                 <button onClick={() => setVisible(true)} className=" border-2 px-2 rounded-md">Menu</button>
