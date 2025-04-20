@@ -285,10 +285,10 @@ export  const veritfyOtp = async (req,res) =>{
 //creating endpoint for logout
 export const logout = async (req,res) =>{
     try{
-        res.clearCookie('token',{
+          res.clearCookie('token',{
             httpOnly : true,
-            secure : true,
-            sameSite : none,
+            secure : process.env.NODE_ENV === 'production',
+            sameSite : process.env.NODE_ENV === 'production' ? 'none' : 'strict',
             path: "/",
         })
 
@@ -806,10 +806,10 @@ export const deleteAccount = async (req,res) =>{
         console.log(user)
         await userModel.findOneAndDelete({ _id: user });
 
-          res.clearCookie('token',{
+         res.clearCookie('token',{
             httpOnly : true,
-            secure : true,
-            sameSite : none,
+            secure : process.env.NODE_ENV === 'production',
+            sameSite : process.env.NODE_ENV === 'production' ? 'none' : 'strict',
             path: "/",
         })
         res.json({
