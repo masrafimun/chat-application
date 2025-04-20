@@ -162,7 +162,7 @@ const Message = () => {
 
 
     return (
-        <div className='w-full h-screen flex flex-col'>
+         <div className='w-full  h-screen flex flex-col'>
           
            {/* navbar  */}
            <div className='bg-cyan-800 sm:pr-[230px] text-center fixed  sm:py-4 sm:mt-0 px-2 w-full mt-[52px] text-white py-2 text-2xl sm:text-4xl'>
@@ -178,7 +178,7 @@ const Message = () => {
 
 
            {/* texts  */}
-          <div className='flex flex-col gap-2 px-3 scrollbar-hide   mb-[80px] py-[10px] overflow-y-auto sm:mt-[92px] mt-[105px]'>
+           <div className='flex flex-col gap-2 px-3 scrollbar-hide   mb-[80px] py-[10px] overflow-y-auto sm:mt-[92px] mt-[105px]'>
             {messages.length===0 ? (<p className='text-center'>No messages.....</p>): (messages.map((msg, index) => {
                  const isMine = msg.sender === userId;
                      return (
@@ -215,7 +215,6 @@ const Message = () => {
              
            </div>
         </div>
-
     );
 };
 
