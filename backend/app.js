@@ -22,7 +22,7 @@ const app = express()
 
 
 app.use(cors({
-    origin: "https://chat-application-gamma-orpin.vercel.app", 
+    origin: "http://localhost:5173", 
     credentials: true,
 }));
 
@@ -33,7 +33,7 @@ const server = http.createServer(app)
 //connecting socket.io to cors
 const io = new Server(server, {
     cors: {
-        origin: "https://chat-application-gamma-orpin.vercel.app", 
+        origin: "http://localhost:5173", 
         credentials: true
     }
 });
