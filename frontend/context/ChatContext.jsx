@@ -27,7 +27,7 @@ const ChatContextProvider = (props) => {
 
       
      //backend url 
-      const backendUrl = import.meta.env.VITE_BACKEND_URL
+      const backendUrl = "https://chat-backend-vbqg.onrender.com"
 
 
       //getting all user information
