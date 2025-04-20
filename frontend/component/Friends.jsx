@@ -65,7 +65,7 @@ const Friends = () => {
             {
             friendsList.length != 0 ? 
               (friendsList.map((user,index) => 
-                    <div key={index} className='flex w-full items-center bg-blue-200 border mb-6 '>
+                    <div key={index} className='flex w-full items-center bg-blue-200 border mb-4 '>
                         <div className='mr-3 bg-amber-400 w-[25%]'>
                             <img className='h-[120px] w-[105px]  border-r' src={user.profilePhoto || profile_image} alt="" />
                         </div>
