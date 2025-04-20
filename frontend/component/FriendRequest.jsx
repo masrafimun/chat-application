@@ -63,21 +63,21 @@ const FriendRequest = () => {
 
 
     return (
-        <div className='px-4  pt-[60px] sm:pt-0 my-8'>
-            <p className=' text-3xl mb-4'>Friend requests :</p>
+        <div className='px-4  pt-[26px] sm:pt-0 my-8'>
+            <p className=' text-2xl mb-1'>Friend requests :</p>
 
              { 
-                friendReqList.length === 0 ? ( <p className='text-3xl w-full text-red-700 '>No friend requests found.....</p>) :
+                friendReqList.length === 0 ? ( <p className='text-2xl w-full text-red-700 '>No friend requests found.....</p>) :
                 (friendReqList.map((user,index) => 
-                 <div key={index} className='flex items-center justify-between border  mb-6 '>
+                 <div key={index} className='flex mt-2 items-center justify-between border  mb-6 '>
                             <div className='mr-3 '>
-                                <img className='h-[120px] w-[105px]  border-r' src={user.profilePhoto || profile_image} alt="" />
+                                <img className='h-[114px] w-[105px]  border-r' src={user.profilePhoto || profile_image} alt="" />
                             </div>
-                            <div className='flex flex-col gap-1  sm:pr-20'>
+                            <div className='flex flex-col  sm:pr-20'>
                                 <p>Name : {user.name} </p>
-                                <p className=''>Username :{user.userName} </p>
-                                <p>Email :{user.email} </p>
-                                <div className='flex'>
+                                <p className='mt-1 mb-2'>Username :{user.userName} </p>
+                                {/* <p>Email :{user.email} </p> */}
+                                <div className='flex mb-2'>
                                     <p onClick={() =>acceepReq(userId,user._id)}  className='px-4 bg-[#24bab8] text rounded-md cursor-pointer mr-4'>Accept</p>
                                     <p onClick={() =>rejectReq(userId,user._id)} className='px-4 bg-[#24bab8] text rounded-md cursor-pointer mr-4'>Reject</p>
                                 </div>
