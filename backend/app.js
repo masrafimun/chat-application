@@ -27,7 +27,7 @@ const server = http.createServer(app)
 //connecting socket.io to cors
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // Replace with your frontend URL
+        origin: "https://chat-application-gamma-orpin.vercel.app", 
         credentials: true
     }
 });
@@ -45,7 +45,7 @@ app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" }));
 
 
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: "https://chat-application-gamma-orpin.vercel.app", 
     credentials: true,
 }));
 
