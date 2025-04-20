@@ -1,5 +1,5 @@
 import express from 'express'
-import { acceptReq, addBio, addProfilepic, allUser, cancelSendReq, checkStatus, deleteAccount, deleteConversation, friendList, friendReqList, getInfo, isAuthenticated, loadMessage, login, logout, mainHome, rejectReq, removeFriend, resetOtp, sendReq, sendText, sendToken, veritfyOtp } from '../controllers/userController.js'
+import { acceptReq, addBio, addProfilepic, allUser, cancelSendReq, checkStatus, deleteAccount, deleteConversation, friendList, friendReqList, getInfo, isAuthenticated, loadMessage, login, logout, rejectReq, removeFriend, resetOtp, sendReq, sendText, sendToken, veritfyOtp } from '../controllers/userController.js'
 import userAuth from '../middleware/userAuth.js'
 
 
@@ -27,7 +27,7 @@ userRouter.post('/sendText',userAuth,sendText)
 userRouter.post('/loadMessage',userAuth,loadMessage)
 userRouter.post('/deleteConversation',userAuth,deleteConversation)
 userRouter.post('/deleteAccount',userAuth,deleteAccount)
-userRouter.get('/',mainHome)
+
 
 
 
