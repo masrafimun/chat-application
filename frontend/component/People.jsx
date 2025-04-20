@@ -67,7 +67,7 @@ const People = ({name,email,profilePic,username,receiverId}) => {
                 <img className='h-[125px] w-[150px] sm:border border-r' src={profilePic || profile_image} alt="" />
             </div>
             <div className='flex mr-3 w-full  flex-col gap-1 sm:gap-2  sm:text-[20px]'>
-                <p>Name : {name} </p>
+                <p>{name} </p>
                 <p className='mb-2 mt-1'>Username :{username} </p>
                 {/* <p>Email :{email} </p> */}
                 <p onClick={status === 'Add' ? sendreq :  (status === 'Requested' ? cancelSendReq : null)} className='sm:hidden mb-2  bg-cyan-700 text-white text-center rounded-md'>{status}</p>
