@@ -6,4 +6,7 @@ import { io } from 'socket.io-client';
     transports: ['websocket']
   });
 
+socket.on('connect_error', (err) => {
+  console.error('Socket connection error:', err.message);
+});
 export default socket;
