@@ -122,7 +122,7 @@ const Profile = () => {
            </div>
 
            <div className='w-full flex justify-between sm:w-[85%] sm:mt-5  sm:pl-[200px]'>
-             <label  className='text-3xl border-2 py-1 px-3 w-[80%]' htmlFor="setBioDup">
+             <label  className='text-2xl border-2 py-1 px-3 w-[80%]' htmlFor="setBioDup">
                 <input onChange={(e) =>setBioDup(e.target.value)} className={!visiBio ? "block outline-none" : "hidden"} type="text" id='setBioDup' placeholder='Your bio...'/>
                 <p className={visiBio ? "block" : "hidden"}>{bio}</p>
              </label>
