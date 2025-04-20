@@ -21,6 +21,12 @@ import authRouter from './routes/authRoutes.js'
 const app = express()
 
 
+app.use(cors({
+    origin: "https://chat-application-gamma-orpin.vercel.app", 
+    credentials: true,
+}));
+
+
 
 //creating http server
 const server = http.createServer(app)
@@ -44,10 +50,6 @@ app.use(cookieParser())
 app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" }));
 
 
-app.use(cors({
-    origin: "https://chat-application-gamma-orpin.vercel.app", 
-    credentials: true,
-}));
 
 
 app.get("/", (req, res) => {
