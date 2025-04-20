@@ -71,9 +71,9 @@ const Friends = () => {
                         </div>
                        
                         <div className='flex w-[80%] flex-col gap-1 pr-2 sm:pr-20'>
-                            <p className='text-[16px]'>{user.name}</p>
+                            <p className='text-[18px]'>{user.name}</p>
                             {/* <p className=''>Username :{user.userName} </p> */}
-                            <p>{user.email} </p>
+                            <p className='text-[15px]'>{user.email} </p>
 
                             <div className=' flex'>
                                <p onClick={() =>Unfriend(userId,user._id)}  className='px-4 bg-[#24bab8] text rounded-md cursor-pointer mr-4'>Unfriend</p>
