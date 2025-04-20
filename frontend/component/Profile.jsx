@@ -109,15 +109,15 @@ const Profile = () => {
         <div className=' px-4 py-4 w-full mt-[68px] sm:mt-0 flex flex-col '>
         
            {/* profile picture  */}
-           <label htmlFor="profileImage"  className='flex justify-center my-17 sm:mb-11 sm:mt-13'>
-              <img className="w-40 h-40 rounded-[50%]" src={!myDetails.profilePhoto ? profile_image : myDetails.profilePhoto} alt="" />
+           <label htmlFor="profileImage"  className='flex my-5 justify-center  sm:my-17 sm:mb-11 sm:mt-13'>
+              <img className="h-35 w-35 sm:w-40 sm:h-40 rounded-[50%]" src={!myDetails.profilePhoto ? profile_image : myDetails.profilePhoto} alt="" />
               <input id='profileImage' type="file" onChange={(e) => {const file = e.target.files[0]; if(file){uploadProfile(file)} }} hidden/>
            </label>
 
            <div className='text-3xl sm:my-3 sm:pl-[200px]'>
                 <p>Name : {myDetails.name}</p>
            </div>
-           <div className='text-3xl my-6  sm:my-5 sm:pl-[200px]'>
+           <div className='text-2xl my-4  sm:my-5 sm:pl-[200px]'>
                  <p>User Name : {myDetails.userName}</p>
            </div>
 
@@ -133,11 +133,8 @@ const Profile = () => {
            </div>
 
            <div className='mt-5 sm:pl-[200px]  sm:w-[85%] sm:flex sm:justify-center'>
-             <p onClick={()=>deleAcoount()} className='bg-cyan-700 w-full rounded-md text-white text-3xl py-2 text-center'>Delete Account</p>
+             <p onClick={()=>deleAcoount()} className='bg-cyan-700 w-full rounded-md py-[5px]  text-white text-2xl sm:text-3xl sm:py-2 text-center'>Delete Account</p>
            </div>
-
-
-         
         </div>
     );
 };
