@@ -109,7 +109,7 @@ const Profile = () => {
         <div className=' px-4 py-4 w-full mt-[68px] sm:mt-0 flex flex-col '>
         
            {/* profile picture  */}
-           <label htmlFor="profileImage"  className='flex my-5 justify-center  sm:my-17 sm:mb-11 sm:mt-13'>
+           <label htmlFor="profileImage"  className='flex mb-5 mt-4 justify-center  sm:my-17 sm:mb-11 sm:mt-13'>
               <img className="h-35 w-35 sm:w-40 sm:h-40 rounded-[50%]" src={!myDetails.profilePhoto ? profile_image : myDetails.profilePhoto} alt="" />
               <input id='profileImage' type="file" onChange={(e) => {const file = e.target.files[0]; if(file){uploadProfile(file)} }} hidden/>
            </label>
