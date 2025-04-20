@@ -10,12 +10,6 @@ import userModel from "../models/userModel.js"
 import messageModel from '../models/messageModel.js'
 
 
-export const mainHome = async (req,res) =>{
-    res.json({
-        success : true,
-        message : "welcome to the chat applicaiton"
-    })
-}
 
 //creating login endpoint
 export const login = async (req,res) => {
