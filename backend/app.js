@@ -50,6 +50,11 @@ app.use(cors({
 }));
 
 
+app.get("/", (req, res) => {
+  res.send("Backend is up");
+});
+
+
 //online user list
 let onlineUsers = [];
 
