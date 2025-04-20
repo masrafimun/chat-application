@@ -32,9 +32,9 @@ const FindPeople = () => {
         }
       },[peopleSearch,allUser])
     return (
-        <div className=' w-full mt-[68px] sm:mt-0'>
+        <div className=' w-full mt-[54px] sm:mt-0'>
            <SearchBar search={peopleSearch} setSearch={setPeopleSearch} placeholder="Search people..." />
-          <div className='px-4 pt-[60px] sm:pt-[80px] sm:px-[250px] my-8'>
+          <div className='px-4 pt-[60px] sm:pt-[80px] sm:px-[250px] mt-2 mb-8'>
                {
                  filteredUsers.map((item,index) => <People receiverId={item._id} key={index} name={item.name} email={item.email} profilePic={item.profilePhoto} username={item.userName}/>)
                }
