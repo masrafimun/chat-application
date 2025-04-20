@@ -49,7 +49,7 @@ export const login = async (req,res) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: true,
-            sameSite: 'none',
+            sameSite: 'None',
             maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
             path: "/",
         });
@@ -260,7 +260,7 @@ export  const veritfyOtp = async (req,res) =>{
         res.cookie('token',token, {
             httpOnly : true,
             secure : true,
-            sameSite : 'none' ,
+            sameSite : 'None' ,
             maxAge : 30 * 24 * 60 * 60 * 1000,
             path: "/",
         })
@@ -288,7 +288,7 @@ export const logout = async (req,res) =>{
           res.clearCookie('token',{
             httpOnly : true,
             secure : true,
-            sameSite : none,
+            sameSite : 'None',
             path: "/",
         })
 
@@ -808,8 +808,8 @@ export const deleteAccount = async (req,res) =>{
 
          res.clearCookie('token',{
             httpOnly : true,
-            secure : process.env.NODE_ENV === 'production',
-            sameSite : process.env.NODE_ENV === 'production' ? 'none' : 'strict',
+            secure : true,
+            sameSite : 'None',
             path: "/",
         })
         res.json({
