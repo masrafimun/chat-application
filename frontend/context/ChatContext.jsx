@@ -71,7 +71,9 @@ const ChatContextProvider = (props) => {
 
      useEffect(() => {
         if (userId) {
-            socket.connect(); 
+            if (!socket.connected) {
+                   socket.connect();
+              }
             socket.emit('user_Id', userId); 
       
             socket.on('get-Users', (users) => {
