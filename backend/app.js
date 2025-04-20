@@ -19,7 +19,7 @@ import authRouter from './routes/authRoutes.js'
 
 //app confiq
 const app = express()
-
+app.set('trust proxy', 1)
 
 app.use(cors({
     origin: "https://chat-frontend-x2cr.onrender.com", 
