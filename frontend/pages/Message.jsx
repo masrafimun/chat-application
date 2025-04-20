@@ -165,10 +165,10 @@ const Message = () => {
         <div className='w-full h-screen flex flex-col'>
           
            {/* navbar  */}
-           <div className='bg-cyan-800 sm:pr-[230px] text-center fixed  sm:py-4 sm:mt-0 px-2 w-full mt-[68px] text-white py-3 text-3xl sm:text-4xl'>
-              <div className='flex sm:py-0 sm:mr-0 items-center py-1 justify-between'>
+           <div className='bg-cyan-800 sm:pr-[230px] text-center fixed  sm:py-4 sm:mt-0 px-2 w-full mt-[52px] text-white py-2 text-2xl sm:text-4xl'>
+              <div className='flex sm:py-0 sm:mr-0 items-center  justify-between'>
                      <p className='sm:ml-5'>{friend.name}</p>
-                     <p onClick={()=>deleteMessage()} className='w-[25%] py-1 text-3xl border-2 rounded-md'>Delete </p>
+                     <p onClick={()=>deleteMessage()} className='w-[25%] text-2xl border-2 rounded-md'>Delete </p>
               </div>
            </div>
 
@@ -178,7 +178,7 @@ const Message = () => {
 
 
            {/* texts  */}
-           <div className='flex flex-col gap-2 px-3 scrollbar-hide   mb-[115px] py-3 overflow-y-auto sm:mt-[92px] mt-[150px]'>
+          <div className='flex flex-col gap-2 px-3 scrollbar-hide   mb-[80px] py-[10px] overflow-y-auto sm:mt-[92px] mt-[105px]'>
             {messages.length===0 ? (<p className='text-center'>No messages.....</p>): (messages.map((msg, index) => {
                  const isMine = msg.sender === userId;
                      return (
@@ -196,18 +196,18 @@ const Message = () => {
 
 
            {/* text area  */}
-           <div className='fixed bottom-4 w-full py-3 px-2 '>
+           <div className='fixed bottom-4  w-full mb-2 px-2 '>
               <div className='flex items-center  justify-between'>
                 <div className='flex w-[86%] sm:w-[80%]   py-2 rounded-4xl pl-1 pr-2 bg-cyan-800  items-center  justify-between'>
                     <label htmlFor="imag" className='cursor-pointer'>
-                       <img className='h-[40px]  rounded-[20%]' src={file_upload } alt="" />
+                       <img className='h-[35px]  rounded-[20%]' src={file_upload } alt="" />
                         <input  className='hidden ' id='imag' placeholder='none' type="file" onChange={(e)=>setImage(e.target.files[0])}/>
                     </label>
-                   <input value={text} onChange={(e)=>setText(e.target.value)} type="text" className='px-3 mr-1 border-white border-2 text-[30px] bg-white  rounded-3xl py-1 outline-none w-[85%]'  placeholder='write something...'/>
+                   <input value={text} onChange={(e)=>setText(e.target.value)} type="text" className='px-3 mr-1 border-white border-2 text-[22px] bg-white  rounded-3xl py-[2px] outline-none w-[85%]'  placeholder='write something...'/>
                 </div>
 
                 <div className='flex justify-center items-center sm:mr-[205px]' >
-                   <p onClick={message} className='bg-cyan-800 px-2  py-1 rounded-4xl text-6xl text-white flex justify-center items-center'>+</p>
+                   <p onClick={message} className='bg-cyan-800 px-2  py-1 rounded-4xl text-5xl text-white flex justify-center items-center'>+</p>
                 </div>
 
               </div>
