@@ -62,7 +62,7 @@ const People = ({name,email,profilePic,username,receiverId}) => {
 
     
     return (
-     <div className='flex items-center border sm:px-7 sm:py-1 mb-4 '>
+     <div className='flex sm:mt-6 items-center border sm:px-7 sm:py-1 mb-4 '>
             <div className='mr-3 '>
                 <img className='h-[125px] w-[150px] sm:border border-r' src={profilePic || profile_image} alt="" />
             </div>
