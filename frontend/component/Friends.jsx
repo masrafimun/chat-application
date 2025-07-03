@@ -65,8 +65,8 @@ const Friends = () => {
             {
             friendsList.length != 0 ? 
               (friendsList.map((user,index) => 
-                    <div key={index} className='flex w-full items-center bg-blue-200 border mb-4 '>
-                        <div className='mr-3 bg-amber-400 w-[25%]'>
+                    <div key={index} className='flex w-full items-center bg-blue-200 border mb-3 '>
+                        <div className='mr-3  w-[25%]  md:w-[10%]'>
                             <img className='h-[120px] w-[105px]  border-r' src={user.profilePhoto || profile_image} alt="" />
                         </div>
                        
@@ -79,7 +79,7 @@ const Friends = () => {
                                <p onClick={() =>Unfriend(userId,user._id)}  className='px-4 bg-[#24bab8] text rounded-md cursor-pointer mr-4'>Unfriend</p>
                             <Link to={`/message/${user._id}`}  className='px-4  bg-[#24bab8]  rounded-md  cursor-pointer mr-4'>Messsage</Link>
                             </div>
-                            <p   className={`px-4 w-[40%] ${isOnline(user._id) ? 'bg-green-500' : 'bg-gray-400'} text rounded-md cursor-pointer mr-4`}>{isOnline(user._id) ? 'Active' : 'Offline'}</p>
+                            <p   className={`px-4 w-[40%] sm:w-[24.5%] ${isOnline(user._id) ? 'bg-green-500' : 'bg-gray-400'} text rounded-md cursor-pointer mr-4`}>{isOnline(user._id) ? 'Active' : 'Offline'}</p>
                         </div>
                         <div>
                         </div>
@@ -91,6 +91,12 @@ const Friends = () => {
 };
 
 export default Friends;
+
+
+
+
+
+
 
 
 
