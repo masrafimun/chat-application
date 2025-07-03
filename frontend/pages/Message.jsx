@@ -196,9 +196,9 @@ const Message = () => {
 
 
            {/* text area  */}
-           <div className='fixed bottom-4  w-full mb-2 px-2 '>
+           <div className='fixed bottom-4 sm:w-[84%] sm:right-4  w-full mb-2 px-2 '>
               <div className='flex items-center  justify-between'>
-                <div className='flex w-[86%] sm:w-[80%]   py-2 rounded-4xl pl-1 pr-2 bg-cyan-800  items-center  justify-between'>
+                <div className='flex w-[86%] sm:w-[94%]  py-2 rounded-4xl pl-1 pr-2 bg-cyan-800  items-center  justify-between'>
                     <label htmlFor="imag" className='cursor-pointer'>
                        <img className='h-[35px]  rounded-[20%]' src={file_upload } alt="" />
                         <input  className='hidden ' id='imag' placeholder='none' type="file" onChange={(e)=>setImage(e.target.files[0])}/>
@@ -206,7 +206,7 @@ const Message = () => {
                    <input value={text} onChange={(e)=>setText(e.target.value)} type="text" className='px-3 mr-1 border-white border-2 text-[22px] bg-white  rounded-3xl py-[2px] outline-none w-[85%]'  placeholder='write something...'/>
                 </div>
 
-                <div className='flex justify-center items-center sm:mr-[205px]' >
+                <div className='flex justify-center items-center sm:mr-4' >
                    <p onClick={message} className='bg-cyan-800 px-2  py-1 rounded-4xl text-5xl text-white flex justify-center items-center'>+</p>
                 </div>
 
@@ -219,3 +219,4 @@ const Message = () => {
 };
 
 export default Message;
+
